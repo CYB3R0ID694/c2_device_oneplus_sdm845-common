@@ -37,4 +37,18 @@ allow vendor_init camera_data_file:file create_file_perms;
 allow vendor_init sysfs:dir add_name;
 allow vendor_init sysfs_devfreq:dir add_name;
 
+allow vendor_init init_service_status_private_prop:file { read };
+allow vendor_init tombstone_data_file:dir { read };
+allow vendor_init tombstone_data_file:dir { open };
+allow vendor_init tombstone_data_file:dir { ioctl };
+allow vendor_init nfc_data_file:dir { read };
+allow vendor_init nfc_data_file:dir { open };
+allow vendor_init nfc_data_file:dir { ioctl };
+allow vendor_init pc_images_file:dir { read };
+allow vendor_init pc_images_file:dir { open };
+allow vendor_init pc_images_file:dir { ioctl };
+allow vendor_init proc_sched:file { write};
+allow vendor_init device:file { write};
+allow vendor_init proc_dirty:file { write};
+
 get_prop(vendor_init, persist_debug_prop)

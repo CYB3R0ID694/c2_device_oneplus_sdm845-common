@@ -48,4 +48,6 @@ allow init hal_param_hwservice:hwservice_manager { add find };
 allow init hal_secure_element_hwservice:hwservice_manager { add find };
 allow init hidl_base_hwservice:hwservice_manager add;
 
+allow init debugfs_tracing_debug:dir { mounton };
+
 permissive init;
